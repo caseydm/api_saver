@@ -10,7 +10,7 @@ def main():
     if items:
         delete_items(session)
         save_items(items, session)
-    session.commit()
+    session.git commit()
     session.close()
 
 

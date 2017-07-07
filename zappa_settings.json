@@ -1,0 +1,12 @@
+{
+    "dev": {
+        "app_function": "app.main",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "s3_bucket": "zappa-efguxmno1",
+        "events": [{
+         "function": "app.main",
+         "expression": "rate(10 minutes)"
+         }]
+    }
+}
