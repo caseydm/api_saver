@@ -19,8 +19,7 @@ def get_items():
     endpoint = 'https://jsonplaceholder.typicode.com/posts'
 
     r = requests.get(endpoint)
-    items = r.json()
-    return items
+    return r.json()
 
 
 def save_items(items, session):
