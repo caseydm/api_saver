@@ -10,7 +10,7 @@ def main():
     if items:
         delete_items(session)
         save_items(items, session)
-    session.git commit()
+    session.commit()
     session.close()
 
 
@@ -31,6 +31,7 @@ def save_items(items, session):
         post.title = item['title']
         post.body = item['body']
         session.add(post)
+
 
 def delete_items(session):
     """Delete all posts."""

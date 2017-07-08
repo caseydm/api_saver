@@ -3,10 +3,12 @@
         "app_function": "app.main",
         "aws_region": "us-east-1",
         "profile_name": "default",
-        "s3_bucket": "zappa-efguxmno1",
+        "s3_bucket": "zappa-50r66fx1u",
         "events": [{
          "function": "app.main",
          "expression": "rate(10 minutes)"
-         }]
+         }],
+        "keep_warm": false,
+        "memory_size": 128
     }
 }
