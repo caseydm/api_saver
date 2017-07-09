@@ -1,6 +1,6 @@
 import requests
 
-from models import Post, Session
+from models import Post, PostJSON, Session
 
 
 def main():
@@ -25,12 +25,18 @@ def get_items():
 def save_items(items, session):
     """Save posts to DB."""
     for item in items:
+        # relational
         post = Post()
         post.id = item['id']
         post.userId = item['userId']
         post.title = item['title']
         post.body = item['body']
         session.add(post)
+
+        # json
+        post_json = PostJSON()
+        post_json.data = item
+        session.add(post_json)
 
 
 def delete_items(session):

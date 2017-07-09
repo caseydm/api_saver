@@ -1,5 +1,5 @@
 import os
-from sqlalchemy import create_engine, Column, DateTime, func, Integer, String
+from sqlalchemy import create_engine, Column, DateTime, func, Integer, JSON, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -18,6 +18,15 @@ class Post(Base):
     userId = Column(Integer)
     title = Column(String(200))
     body = Column(String)
+    last_updated = Column(DateTime, server_default=func.now())
+
+
+class PostJSON(Base):
+    """Post JSON model."""
+    __tablename__ = 'posts_json'
+
+    id = Column(Integer, primary_key=True)
+    data = Column(JSON)
     last_updated = Column(DateTime, server_default=func.now())
 
 
