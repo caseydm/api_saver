@@ -9,6 +9,7 @@
          "expression": "rate(10 minutes)"
          }],
         "keep_warm": false,
+        "apigateway_enabled": false,
         "memory_size": 128
     }
 }
