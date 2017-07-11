@@ -42,6 +42,7 @@ def save_items(items, session):
 def delete_items(session):
     """Delete all posts."""
     session.query(Post).delete(synchronize_session=False)
+    session.query(PostJSON).delete(synchronize_session=False)
 
 
 if __name__ == "__main__":
