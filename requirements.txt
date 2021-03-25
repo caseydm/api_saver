@@ -18,7 +18,7 @@ placebo==0.8.1
 psycopg2==2.7.1
 python-dateutil==2.6.0
 python-slugify==1.2.4
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.1
 s3transfer==0.1.10
 six==1.10.0
